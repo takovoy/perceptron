@@ -1,0 +1,19 @@
+<div class="category"
+     [ngClass]="{checked: checkedCategory === 'event'}"
+     (click)="categoryClick.emit('event')">
+  <svg-icon-sprite
+    src="assets/sprites/sprite.svg#event-placeholder"
+    width="32px"
+    height="32px"></svg-icon-sprite>
+  <div class="category__text">События</div>
+</div>
+<div class="category"
+     *ngFor="let category of categories"
+     [ngClass]="{checked: checkedCategory === category.name}"
+     (click)="categoryClick.emit(category.name)">
+  <svg-icon-sprite
+    [src]="'assets/sprites/sprite.svg#' + category.name"
+    width="32px"
+    height="32px"></svg-icon-sprite>
+  <div class="category__text">{{category.desc}}</div>
+</div>

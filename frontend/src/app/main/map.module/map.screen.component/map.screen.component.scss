@@ -1,0 +1,64 @@
+@keyframes show-event-description {
+  from {
+    opacity: 0;
+    transform: translate(-40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+:host {
+  background: url("/assets/bg.svg") no-repeat center/cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.cards-list {
+  position: absolute;
+  padding: 0 16px;
+  left: 4px;
+  top: 134px;
+  overflow: auto;
+  bottom: 0;
+  width: 296px;
+  padding-bottom: 24px;
+  &.focused {
+    app-short-card {
+      opacity: 0.4;
+      &.checked {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+app-short-card {
+  margin-bottom: 24px;
+  transition: opacity 0.2s linear;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+app-map {
+  position: absolute;
+  top: 134px;
+  left: 320px;
+  bottom: 24px;
+  right: 24px;
+  transition: left 0.2s linear;
+  &.focused {
+    left: 677px;
+  }
+}
+
+app-event-description, app-place-description {
+  z-index: 1;
+  animation: 0.2s linear show-event-description;
+}

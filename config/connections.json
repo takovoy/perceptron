@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Backend",
+    "alias": "backend",
+    "secret": "123",
+    "host": "192.168.1.1",
+    "port": 3001,
+    "apiPath": "api"
+  },
+  {
+    "name": "PerceptronDB",
+    "alias": "perceptronDB",
+    "host": "192.168.1.1",
+    "port": 3002,
+    "username": "admin",
+    "password": "password"
+  },
+  {
+    "name": "Perceptron",
+    "alias": "perceptron",
+    "secret": "123",
+    "host": "192.168.1.1",
+    "port": 3002,
+    "apiPath": "api"
+  }
+]

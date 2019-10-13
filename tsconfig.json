@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "rootDirs": [
+            "./common/src",
+            "./data_models/src",
+            "./services/src"
+        ],
+        "paths": {
+            "@common/*" : ["./common/*"],
+            "@models/*" : ["./models/*"],
+            "@services/*" : ["./services/*"]
+        }
+    }
+}

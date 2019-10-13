@@ -1,0 +1,33 @@
+:host {
+  position: absolute;
+  top: 78px;
+  padding: 0 24px;
+}
+
+.category {
+  float: left;
+  margin-right: 40px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.2s linear;
+  &:last-child {
+    margin-right: 0;
+  }
+  &__text {
+    float: left;
+    color: #FFFFFF;
+    line-height: 17px;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  &.checked {
+    opacity: 1;
+  }
+}
+
+svg-icon-sprite {
+  float: left;
+  color: #fff;
+  margin-right: 14px;
+  display: block;
+}
