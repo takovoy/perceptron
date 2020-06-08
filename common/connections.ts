@@ -1,4 +1,4 @@
-import {IConnection} from '../models/connection.model';
+import {IConnection} from '@models/connection.model';
 
 export class Connections {
     private static list: IConnection[] = require('../config/connections.json');

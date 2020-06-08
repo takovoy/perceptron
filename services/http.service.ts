@@ -1,6 +1,6 @@
 import * as http from 'http';
-import {HTTPResponseCodes, IHTTPResponse, IHttpService} from '../models/http.service.model';
-import {IConnection} from '../models/connection.model';
+import {HTTPResponseCodes, IHTTPResponse, IHttpService} from '@models/http.service.model';
+import {IConnection} from '@models/connection.model';
 
 export class HTTPService implements IHttpService {
     constructor(private connection: IConnection) {}

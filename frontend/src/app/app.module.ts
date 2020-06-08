@@ -4,7 +4,9 @@ import { registerLocaleData } from '@angular/common';
 import localeRuAt from '@angular/common/locales/ru';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MapModule} from './main/map.module/map.module';
+import {BackendService} from 'app/services/backend.service';
+import {IndexModule} from 'app/main/index.module/index.module';
+import {HttpClientModule} from '@angular/common/http';
 
 registerLocaleData(localeRuAt);
 
@@ -15,10 +17,12 @@ registerLocaleData(localeRuAt);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MapModule,
+    IndexModule,
+    HttpClientModule,
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'ru' }
+    { provide: LOCALE_ID, useValue: 'ru' },
+    BackendService,
   ],
   bootstrap: [AppComponent]
 })

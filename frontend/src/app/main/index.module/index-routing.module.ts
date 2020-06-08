@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {MapScreenComponent} from './map.screen.component/map.screen.component';
+import {IndexScreenComponent} from './index.screen.component/index.screen.component';
 
 const routes: Routes = [
   {
-    path: 'map',
-    component: MapScreenComponent
+    path: '',
+    pathMatch: 'full',
+    component: IndexScreenComponent
   }
 ];
 
@@ -13,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class MapRoutingModule { }
+export class IndexRoutingModule { }
